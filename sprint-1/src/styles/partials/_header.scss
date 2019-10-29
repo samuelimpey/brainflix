@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 169px;
+    &__logo {
+        height: 48px;
+        box-sizing: border-box;
+        padding: 8px;
+    }
+    &__searchbar {
+        height: 48px;
+    }
+    &__button {
+        height: 49px;
+        background-color: $brainflix-blue;
+        border: none;
+        border-radius: 4px;
+    }
+    &__NOOR {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+}
