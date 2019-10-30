@@ -1,10 +1,5 @@
 import React from 'react'
-// import video from '../../assets/images/video-list-0.jpg'
-// import playBtn from '../../assets/icons/SVG/Icon-play.svg'
-// import scrubber from '../../assets/icons/SVG/Icon-scrubber-control.svg'
-// import full from '../../assets/icons/SVG/Icon-fullscreen.svg'
-// import volume from '../../assets/icons/SVG/Icon-volume.svg'
-// import video from '../../assets/video/BrainStation Sample Video.mp4'
+import Avatar from '../../assets/images/avatar.jpg'
 
 
 export default function Comments({ current }) {
@@ -24,8 +19,21 @@ export default function Comments({ current }) {
 
     });
     return (
-        <div className="video-player">
-            {comments}
-        </div>
+        <>
+            <form className="comment-section">
+                <div className="comment-input-section">
+                    <img id="avatar" src={Avatar} alt="Avatar" />
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="Name"></input>
+                    <textarea name="comment" className="comment-section__comment" placeholder="Add a new comment"></textarea>
+                </div>
+                <button type="submit" className="comment-section__button">Comment</button>
+
+                <div id="comments"></div>
+            </form>
+            <div className="video-player">
+                {comments}
+            </div>
+        </>
     )
 }
