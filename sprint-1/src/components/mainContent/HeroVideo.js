@@ -1,5 +1,5 @@
 import React from 'react'
-import video from '../../assets/images/video-list-0.jpg'
+// import video from '../../assets/images/video-list-0.jpg'
 // import playBtn from '../../assets/icons/SVG/Icon-play.svg'
 // import scrubber from '../../assets/icons/SVG/Icon-scrubber-control.svg'
 // import full from '../../assets/icons/SVG/Icon-fullscreen.svg'
@@ -7,10 +7,10 @@ import video from '../../assets/images/video-list-0.jpg'
 // import video from '../../assets/video/BrainStation Sample Video.mp4'
 
 
-export default function HeroVideo() {
+export default function HeroVideo({ current }) {
     return (
         <div className="video-player">
-            <video className="video-player__video" poster={video} controls>
+            <video className="video-player__video" poster={current.image} controls>
 
             </video >
             {/* <div className="video-player__controlls">
