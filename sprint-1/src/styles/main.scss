@@ -2,3 +2,16 @@
 @import './partials/colors';
 @import './partials/fonts';
 @import './partials/header';
+@import './partials/video-player';
+
+html, body {
+    
+    box-sizing: border-box;
+    height: 100vh;
+    color: $black;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    box-sizing: inherit;
+}

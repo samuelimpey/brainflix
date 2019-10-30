@@ -4,8 +4,9 @@ import HeroVideo from './mainContent/HeroVideo';
 
 export default function MainContent() {
     return (
-        <div>
+        <main>
             <HeroVideo />
-        </div>
+            <VIdeoInfo />
+        </main>
     )
 }
