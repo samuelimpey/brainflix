@@ -3,14 +3,14 @@ import Avatar from '../../assets/images/avatar.jpg'
 
 
 export default function Comments({ current }) {
-    console.log(current);
+    console.log(current.comments.length);
     const comments = current.comments && current.comments.map(function (comment) {
         return (
-            <div>
-                <img src={comment.avatar} alt="face" />
-                <h5>{comment.name}</h5>
-                <h5>{comment.date}</h5>
-                <p>{comment.comment}</p>
+            <div className="comments__comment">
+                <img className="comments__comment--avatar" src={comment.avatar} alt="face" />
+                <h5 className="comments__comment--name">{comment.name}</h5>
+                <h5 className="comments__comment--date">{comment.date}</h5>
+                <p className="comments__comment--comment">{comment.comment}</p>
 
             </div>
 
@@ -20,18 +20,17 @@ export default function Comments({ current }) {
     });
     return (
         <>
-            <form className="comment-section">
-                <div className="comment-input-section">
-                    <img id="avatar" src={Avatar} alt="Avatar" />
-                    <label>Name</label>
-                    <input type="text" name="name" placeholder="Name"></input>
-                    <textarea name="comment" className="comment-section__comment" placeholder="Add a new comment"></textarea>
+            <form className="comment-input">
+                <h3 className="comment-input--count">{current.comments.length} Comments</h3>
+                <div className="comment-input__section">
+                    <img className="comment-input__section--avatar" src={Avatar} alt="Avatar" />
+                    <label className="comment-input__section--label">Name</label>
+                    <input className="comment-input__section--name" type="text" name="name" placeholder="Name"></input>
+                    <textarea name="comment" className="comment-input__section--comment" placeholder="Add a new comment"></textarea>
                 </div>
-                <button type="submit" className="comment-section__button">Comment</button>
-
-                <div id="comments"></div>
+                <button type="submit" className="comment-input--button">Comment</button>
             </form>
-            <div className="video-player">
+            <div className="comments">
                 {comments}
             </div>
         </>

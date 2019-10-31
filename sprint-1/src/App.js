@@ -110,10 +110,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <Header />
         <MainContent next={this.nextVideo} current={this.mainVideo} />
-      </div>
+      </>
     );
   }
 }

@@ -1,11 +1,11 @@
 @import './partials/breakpoints';
 @import './partials/colors';
 @import './partials/fonts';
-@import './partials/header';
-@import './partials/video-player';
+
+
 
 html, body {
-    
+    font-family: AvenirRegular;
     box-sizing: border-box;
     height: 100vh;
     color: $black;
@@ -15,3 +15,12 @@ html, body {
     margin: 0;
     box-sizing: inherit;
 }
+
+
+@import './partials/header';
+@import './partials/video-player';
+@import './partials/comment-input';
+@import './partials/comments';
+@import './partials/main-content';
+@import './partials/next-videos';
+@import './partials/video-info';

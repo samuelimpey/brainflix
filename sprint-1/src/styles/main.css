@@ -24,7 +24,7 @@
 }
 
 @font-face {
-  font-family: AvenirRegualr;
+  font-family: AvenirRegular;
   font-style: normal;
   font-weight: 400;
   src: url("../assets/fonts/AvenirNextProLT/Avenir-Regular.otf");
@@ -114,6 +114,20 @@
   src: url("../assets/fonts/AvenirNextProLT/Avenir-HeavyIt.otf");
 }
 
+html, body {
+  font-family: AvenirRegular;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100vh;
+  color: #323232;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,20 +173,12 @@
   height: 100%;
 }
 
-.video-player__controlls {
-  position: relative;
+.main-content {
+  margin: 32px 5% 24px 5%;
 }
 
-html, body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 100vh;
-  color: #323232;
-}
-
-*, *:before, *:after {
-  margin: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+.next-videos__video--image {
+  width: 120px;
+  height: 70px;
 }
 /*# sourceMappingURL=main.css.map */

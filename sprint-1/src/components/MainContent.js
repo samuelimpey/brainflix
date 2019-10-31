@@ -11,9 +11,13 @@ export default function MainContent({ next, current }) {
     return (
         <main>
             <HeroVideo current={current} />
-            <VideoInfo current={current} />
-            <Comments current={current} />
-            <NextVideos next={next} />
+            <div className="main-content">
+                <div className="main-content__video-specific">
+                    <VideoInfo current={current} />
+                    <Comments current={current} />
+                </div>
+                <NextVideos next={next} />
+            </div>
         </main>
     )
 }
