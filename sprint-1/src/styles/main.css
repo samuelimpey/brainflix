@@ -137,6 +137,7 @@ html, body {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 169px;
+  margin: 0 5%;
 }
 
 .header__logo {
@@ -148,16 +149,29 @@ html, body {
 
 .header__searchbar {
   height: 48px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
 }
 
-.header__button {
+.header__button-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__button-section--button {
   height: 49px;
   background-color: #0095ff;
   border: none;
   border-radius: 4px;
+  margin-right: 5vw;
+  width: 79.375%;
+  color: #ffffff;
 }
 
-.header__NOOR {
+.header__button-section--NOOR {
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -173,6 +187,26 @@ html, body {
   height: 100%;
 }
 
+.comments__comment--avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.comment-input--count {
+  margin-bottom: 32px;
+}
+
+.comment-input__section {
+  display: inline-block;
+}
+
+.comment-input__section--avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
 .main-content {
   margin: 32px 5% 24px 5%;
 }
@@ -180,5 +214,62 @@ html, body {
 .next-videos__video--image {
   width: 120px;
   height: 70px;
+}
+
+.video-info__info--title {
+  margin-bottom: 16px;
+}
+
+.video-info__info--channel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 32px;
+}
+
+.video-info__info--channel--name {
+  margin-right: 8px;
+}
+
+.video-info__info--channel--timestamp {
+  color: #AFAFAF;
+}
+
+.video-info__info--stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.video-info__info--stats--views {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin-right: 16px;
+}
+
+.video-info__info--stats--likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.video-info__info--stats--icon {
+  margin-right: 8px;
+}
+
+.video-info__description {
+  margin: 24px 0 40px 0;
 }
 /*# sourceMappingURL=main.css.map */

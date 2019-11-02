@@ -1,7 +1,9 @@
 .comments {
     &__comment {
         &--avatar {
-
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
         }
         &--name {
 
@@ -16,11 +18,14 @@
 }
 .comment-input {
     &--count {
-
+        margin-bottom: 32px;
     }
     &__section {
+        display: inline-block;
         &--avatar {
-
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
         }
         &--label {
 

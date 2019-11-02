@@ -7,9 +7,9 @@ export default function header() {
         <header className="header">
             <img className="header__logo" src={logo} alt="sucks" />
             <input className="header__searchbar" type="text" placeholder="Search"></input>
-            <div>
-                <button className="header__button">Uplaod</button>
-                <img className="header__NOOR" src={avatar} alt="the face" />
+            <div className="header__button-section">
+                <button className="header__button-section--button">Uplaod</button>
+                <img className="header__button-section--NOOR" src={avatar} alt="the face" />
             </div>
         </header>
     )

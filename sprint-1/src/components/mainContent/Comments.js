@@ -24,8 +24,9 @@ export default function Comments({ current }) {
                 <h3 className="comment-input--count">{current.comments.length} Comments</h3>
                 <div className="comment-input__section">
                     <img className="comment-input__section--avatar" src={Avatar} alt="Avatar" />
-                    <label className="comment-input__section--label">Name</label>
-                    <input className="comment-input__section--name" type="text" name="name" placeholder="Name"></input>
+
+                    {/* <input className="comment-input__section--name" type="text" name="name" placeholder="Name"></input> */}
+                    <label className="comment-input__section--label">Join the conversation</label>
                     <textarea name="comment" className="comment-input__section--comment" placeholder="Add a new comment"></textarea>
                 </div>
                 <button type="submit" className="comment-input--button">Comment</button>

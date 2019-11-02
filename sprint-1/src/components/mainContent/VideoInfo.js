@@ -12,8 +12,8 @@ export default function VideoInfo({ current }) {
                     <h5 className="video-info__info--channel--timestamp">{current.timestamp}</h5>
                 </div>
                 <div className="video-info__info--stats">
-                    <h5 className="video-info__info--stats--views"><img src={views} alt="eyeball" />{current.views}</h5>
-                    <h5 className="video-info__info--stats--likes"><img src={likes} alt="heart" />{current.likes}</h5>
+                    <h5 className="video-info__info--stats--views"><img className="video-info__info--stats--icon" src={views} alt="eyeball" />{current.views}</h5>
+                    <h5 className="video-info__info--stats--likes"><img className="video-info__info--stats--icon" src={likes} alt="heart" />{current.likes}</h5>
                 </div>
             </div>
             <p className="video-info__description">{current.description}</p>
