@@ -2,6 +2,7 @@
     &__info {
         &--title {
             margin-bottom: 16px;
+            font-family: AvenirBold;
         }
         &--channel {
             display: flex;
@@ -12,12 +13,14 @@
             }
             &--timestamp {
                 color: $silver;
+                font-family: AvenirThin;
             }
         }
         &--stats {
             display: flex;
             padding-bottom: 24px;
             border-bottom: 1px solid $mercury;
+            font-family: AvenirThin;
             &--views {
                 display: flex;
                 align-items: start;
@@ -34,5 +37,21 @@
     }
     &__description {
         margin: 24px 0 40px 0;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+@include medium {
+    .video-info {
+        &__info--channel--name {
+            font-size: 18px;
+            font-family: AvenirSemi;
+        }
+        &__description {
+            width: 70%;
+            font-size: .85rem;
+            margin: 40px 0 64px 0;
+    }
     }
 }

@@ -6,7 +6,7 @@
     &__logo {
         height: 48px;
         box-sizing: border-box;
-        padding: 8px;
+        padding: 8px 0;
     }
     &__searchbar {
         height: 48px;
@@ -24,12 +24,54 @@
         border-radius: 4px;
         margin-right: 5vw;
         width: 79.375%;
+        font-size: 16px;
         color: $white;
         }
-    &--NOOR {
+        &--NOOR {
         height: 50px;
         width: 50px;
         border-radius: 50%;
         }
+        &--plus {
+            height: 12px;
+        }
     }
+}
+
+@include medium {
+    .header {
+        margin: 0 3.125%;
+        flex-direction: row;
+        height: 80px;
+        align-items: center;
+        &__logo {
+            margin-right: 169px;
+        }
+        &__searchbar {
+            margin: 16px 24px 16px 0;
+            width: 25.4%;
+            flex-shrink: 0;
+        }
+        &__button-section{
+            &--button {
+                width: 110px;
+                margin-right: 24px;
+            }
+        }
+    }
+
+}
+
+@include huge {
+    .header {
+        margin: 0 12.5%;
+        &__logo {
+            margin-right: 509px;
+        }
+        &__searchbar {
+            
+            width: 202px;
+        }
+    }
+    
 }

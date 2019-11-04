@@ -8,7 +8,7 @@ export default function VideoInfo({ current }) {
             <div className="video-info__info">
                 <h1 className="video-info__info--title">{current.title}</h1>
                 <div className="video-info__info--channel">
-                    <h3 className="video-info__info--channel--name">{current.channel}</h3>
+                    <h4 className="video-info__info--channel--name">{current.channel}</h4>
                     <h5 className="video-info__info--channel--timestamp">{current.timestamp}</h5>
                 </div>
                 <div className="video-info__info--stats">
