@@ -447,6 +447,10 @@ h5 {
   margin: 24px 0;
 }
 
+.next-videos__video--hide {
+  display: none;
+}
+
 .next-videos__video--image {
   width: 120px;
   height: 70px;

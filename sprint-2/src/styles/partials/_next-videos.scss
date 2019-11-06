@@ -1,35 +1,38 @@
 .next-videos {
-    &--header {
-        margin: 40px 0;
+  &--header {
+    margin: 40px 0;
+  }
+  &__video {
+    text-decoration: none;
+    color: $black;
+    display: flex;
+    // justify-content: space-between;
+    margin: 24px 0;
+    &--hide {
+      display: none;
     }
-    &__video {
-        text-decoration: none;
-        color: $black;
-        display: flex;
-        // justify-content: space-between;
-        margin: 24px 0;
-        &--image {
-            // position: relative;
-            width: 120px;
-            height: 70px;
-            border-radius: 4px;
-            margin-right: 10px;
-        }
-        &__info {
-            // position: absolute;
-            // right: 24px;
-            width: 54.8%;
-            &--title {
-                margin: 4px 0 8px 0;
-            }
-            &--channel {
-                font-weight: 400;
-            }
-        }
+    &--image {
+      // position: relative;
+      width: 120px;
+      height: 70px;
+      border-radius: 4px;
+      margin-right: 10px;
     }
+    &__info {
+      // position: absolute;
+      // right: 24px;
+      width: 54.8%;
+      &--title {
+        margin: 4px 0 8px 0;
+      }
+      &--channel {
+        font-weight: 400;
+      }
+    }
+  }
 }
 @include huge {
-    .next-videos--header {
-        margin-top: 0;
-    }
+  .next-videos--header {
+    margin-top: 0;
+  }
 }

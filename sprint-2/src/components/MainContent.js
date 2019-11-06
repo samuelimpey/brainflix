@@ -29,7 +29,7 @@ export default class MainContent extends React.Component {
                 <VideoInfo current={this.props.current} />
                 <Comments current={this.props.current} />
               </div>
-              <NextVideos next={this.props.next} />
+              <NextVideos next={this.props.next} current={this.props.current} />
             </div>
           </main>
         ) : (
