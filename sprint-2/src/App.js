@@ -1,61 +1,91 @@
 import React, { Component } from "react";
-import Header from './components/Header';
-import MainContent from './components/MainContent';
-import axios from 'axios';
-import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
-
-
+import Header from "./components/Header";
+import MainContent from "./components/MainContent";
+import axios from "axios";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
 class App extends Component {
-  state = {
-    videos: [],
-    currentVid: {},
-    id: "",
+  constructor(props) {
+    super(props);
+    this.state = {
+      videos: [],
+      currentVid: {},
+      id: ""
+    };
   }
+
+  updateState = newState => {
+    this.setState({
+      currentVid: newState
+    });
+  };
   componentDidMount() {
-    axios.get("https://project-2-api.herokuapp.com/videos?api_key=8a316df3-fb97-4957-a135-d31dcd062cd1").then(response => {
-      console.log(response.data)
-      this.setState({
-        videos: response.data,
-        id: response.data[0].id
-        // currentVid: response.data[0]
+    console.log(this.props);
+    axios
+      .get(
+        "https://project-2-api.herokuapp.com/videos?api_key=8a316df3-fb97-4957-a135-d31dcd062cd1"
+      )
+      .then(response => {
+        this.setState({
+          videos: response.data
+        });
+        return response.data[0].id;
       })
-    })
-
-    axios.get(`https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=8a316df3-fb97-4957-a135-d31dcd062cd1`).then(response => {
-      console.log(this.state.id)
-
-      this.setState({
-        currentVid: response.data
-      })
-    })
+      .then(videoId => {
+        axios
+          .get(
+            `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=8a316df3-fb97-4957-a135-d31dcd062cd1`
+          )
+          .then(resp => {
+            // console.log(resp);
+            this.setState({
+              currentVid: resp.data,
+              id: resp.data.id
+            });
+          });
+      });
   }
 
+  componentWillUnmount() {
+    console.log("unmounted");
+  }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (this.state.match.params.id != prevState.match.params.id) {
-
-  //   }
-  //   axios.get(`https://project-2-api.herokuapp.com/videos/:${this.id}?api_key=8a316df3-fb97-4957-a135-d31dcd062cd1`).then(response => this.setState({
-  //     currentVid: response.data
-  //   }))
-  // }
   render() {
-    console.log(this.state.currentVid);
+    console.log(this.state.id);
     return (
-      <BrowserRouter>
-        <>
-          <Header />
-          <MainContent next={this.state.videos} current={this.state.currentVid} currentID={this.state.id} />
-          <Switch>
-            <Route path="video/:videoID" exact component={MainContent} />
-          </Switch>
-        </>
-      </BrowserRouter >
+      <>
+        <Header />
+        {/* <BrowserRouter> */}
+        <Switch>
+          <Route
+            path="/"
+            exact
+            render={props => (
+              <MainContent
+                next={this.state.videos}
+                current={this.state.currentVid}
+                currentID={props.match.params.videoID}
+                {...props}
+              />
+            )}
+          />
+          <Route
+            path="/video/:videoID"
+            render={props => (
+              <MainContent
+                next={this.state.videos}
+                current={this.state.currentVid}
+                currentID={props.match.params.videoID}
+                updateState={this.updateState}
+                {...props}
+              />
+            )}
+          />
+        </Switch>
+        {/* </BrowserRouter> */}
+      </>
     );
   }
 }
-
-
 
 export default App;

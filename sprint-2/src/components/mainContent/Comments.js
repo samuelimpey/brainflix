@@ -3,7 +3,7 @@ import Avatar from '../../assets/images/avatar.jpg'
 
 
 export default function Comments({ current }) {
-    console.log(current.comments);
+    console.log(current);
     const comments = current.comments && current.comments.map(function (comment) {
         return (
             <div className="comments__comment" key={comment.id}>
