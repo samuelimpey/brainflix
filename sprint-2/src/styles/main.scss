@@ -1,68 +1,69 @@
-@import './partials/breakpoints';
-@import './partials/colors';
-@import './partials/fonts';
+@import "./partials/breakpoints";
+@import "./partials/colors";
+@import "./partials/fonts";
 
-
-
-html, body {
-    font-family: AvenirRegular;
-    box-sizing: border-box;
-    height: 100vh;
-    color: $black;
+html,
+body {
+  font-family: AvenirRegular;
+  box-sizing: border-box;
+  height: 100vh;
+  color: $black;
 }
 
-*, *:before, *:after {
-    margin: 0;
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  margin: 0;
+  box-sizing: inherit;
 }
 h1 {
-    font-size: 24px;
-    line-height: 32px;
-    margin: 0;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0;
 }
 
 h2 {
-    font-size: 14px;
-    line-height: 22px;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 h4 {
-    font-size: 13px;
-    line-height: 18px;
+  font-size: 13px;
+  line-height: 18px;
 }
 h5 {
-    font-size: 12px;
-    line-height: 20px;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 @include medium {
-    h1 {
+  h1 {
     font-size: 36px;
     line-height: 44px;
     margin: 0;
-    }
+  }
 
-    h2 {
+  h2 {
     font-size: 24px;
     line-height: 32px;
-    }
+  }
 
-    h4 {
+  h4 {
     font-size: 13px;
     line-height: 18px;
-    }
-    h5 {
+  }
+  h5 {
     font-size: 12px;
     line-height: 20px;
     margin: 0;
-    }
+  }
 }
 
-
-@import './partials/header';
-@import './partials/video-player';
+@import "./partials/header";
+@import "./partials/video-player";
 // @import './partials/comment-input';
-@import './partials/comments';
-@import './partials/main-content';
-@import './partials/next-videos';
-@import './partials/video-info';
+@import "./partials/comments";
+@import "./partials/main-content";
+@import "./partials/next-videos";
+@import "./partials/video-info";
+@import "./partials/upload";

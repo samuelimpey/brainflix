@@ -18,7 +18,7 @@ export default class MainContent extends React.Component {
   }
   render() {
     return (
-      <main>
+      <>
         {this.props.current !== undefined &&
         this.props.next.length > 0 &&
         Object.keys(this.props.current).length > 0 ? (
@@ -35,7 +35,7 @@ export default class MainContent extends React.Component {
         ) : (
           <h1>LOADING.......</h1>
         )}
-      </main>
+      </>
     );
   }
 }

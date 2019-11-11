@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import MainContent from "./components/MainContent";
 import axios from "axios";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import Upload from "./components/Upload";
 
 class App extends Component {
   constructor(props) {
@@ -81,6 +82,7 @@ class App extends Component {
               />
             )}
           />
+          <Route path="/upload" component={Upload} />
         </Switch>
         {/* </BrowserRouter> */}
       </>

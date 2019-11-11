@@ -114,7 +114,8 @@
   src: url("../assets/fonts/AvenirNextProLT/Avenir-HeavyIt.otf");
 }
 
-html, body {
+html,
+body {
   font-family: AvenirRegular;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -122,7 +123,9 @@ html, body {
   color: #323232;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   margin: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
@@ -170,6 +173,10 @@ h5 {
   }
 }
 
+header {
+  border-bottom: solid 1px #e1e1e1;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,6 +194,11 @@ h5 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 8px 0;
+  text-align: center;
+}
+
+.header__logo--image {
+  height: 100%;
 }
 
 .header__searchbar {
@@ -195,6 +207,11 @@ h5 {
   border-radius: 4px;
   border: 1px solid #e1e1e1;
   background-color: #fafafa;
+  background-image: url("../assets/icons/SVG/Icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 12px 16px;
+  background-size: 16px;
+  text-indent: 32px;
 }
 
 .header__button-section {
@@ -212,6 +229,7 @@ h5 {
   width: 79.375%;
   font-size: 16px;
   color: #ffffff;
+  text-align: center;
 }
 
 .header__button-section--NOOR {
@@ -366,6 +384,7 @@ h5 {
   padding: 6px;
   border-radius: 4px;
   border: 1px solid #e1e1e1;
+  background-color: #fafafa;
 }
 
 #button {
@@ -407,7 +426,7 @@ h5 {
   }
   #button {
     width: 160px;
-    margin-right: 40px;
+    margin-left: 40px;
   }
 }
 
@@ -431,6 +450,7 @@ h5 {
   .main-content__video-specific {
     width: 712px;
     margin-right: 24px;
+    border-right: 1px solid #e1e1e1;
   }
 }
 
@@ -547,6 +567,163 @@ h5 {
     width: 70%;
     font-size: .85rem;
     margin: 40px 0 64px 0;
+  }
+}
+
+.upload {
+  margin: 24px 5% 0 5%;
+}
+
+.upload--title {
+  margin-bottom: 32px;
+  font-family: AvenirBold;
+}
+
+.upload__video {
+  margin-bottom: 32px;
+}
+
+.upload__video--label {
+  color: #AFAFAF;
+  font-family: AvenirSemi;
+}
+
+.upload__video--image {
+  width: 100%;
+  border-radius: 4px;
+  max-width: 344px;
+}
+
+.upload__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.upload__inputs label {
+  color: #AFAFAF;
+  font-family: AvenirSemi;
+  font-size: 12px;
+}
+
+.upload__inputs--title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.upload__inputs--title--input {
+  width: 100%;
+  height: 44px;
+  font-family: AvenirRegular;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+  padding-left: 10px;
+}
+
+.upload__inputs--description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.upload__inputs--description--input {
+  width: 100%;
+  height: 143px;
+  font-family: AvenirRegular;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+  padding: 10px 0 0 10px;
+}
+
+.upload__inputs--buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.upload__inputs--buttons--publish {
+  background-color: #0095ff;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  height: 48px;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.upload__inputs--buttons--cancel {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  color: #0095ff;
+  height: 48px;
+  font-size: 16px;
+  height: 16px;
+  margin-bottom: 24px;
+}
+
+.upload__inputs--buttons--publish:hover {
+  background-color: #0065ad;
+}
+
+.upload__inputs--buttons--cancel:hover {
+  color: #0065ad;
+}
+
+@media only screen and (min-width: 768px) {
+  .upload {
+    margin: 48px 3.125% 0 3.125%;
+  }
+  .upload--title {
+    padding-bottom: 32px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .upload__video {
+    margin: 40px 0;
+  }
+  .upload__inputs--description {
+    margin: 0;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .upload__inputs--buttons {
+    margin-top: 40px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .upload__inputs--buttons--cancel {
+    margin: 15px 48px;
+  }
+  .upload__inputs--buttons--publish {
+    width: 160px;
   }
 }
 /*# sourceMappingURL=main.css.map */
