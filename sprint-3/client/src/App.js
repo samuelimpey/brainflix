@@ -23,9 +23,7 @@ class App extends Component {
   componentDidMount() {
     console.log(this.props);
     axios
-      .get(
-        "https://project-2-api.herokuapp.com/videos?api_key=8a316df3-fb97-4957-a135-d31dcd062cd1"
-      )
+      .get("https://localhost:5000/videos")
       .then(response => {
         this.setState({
           videos: response.data
