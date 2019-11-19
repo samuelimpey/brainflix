@@ -7,7 +7,6 @@ import axios from "axios";
 
 export default class MainContent extends React.Component {
   componentDidUpdate(prevProps, prevState) {
-    console.log(prevProps, this.props);
     if (this.props.match.params.videoID !== prevProps.match.params.videoID) {
       axios
         .get(`http://localhost:5000/videos/${this.props.match.params.videoID}`)

@@ -722,6 +722,8 @@ header {
   .upload__inputs--sep2 {
     margin-top: 44px;
     width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
   }
   .upload__inputs--description {
     border: none;
