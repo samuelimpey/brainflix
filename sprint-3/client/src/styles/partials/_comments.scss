@@ -102,4 +102,16 @@
     width: 160px;
     margin-left: 40px;
   }
+  .comments__comment__content__head--name {
+    font-size: 1em;
+  }
+  .comments__comment__content--comment {
+    font-size: 0.8em;
+  }
+}
+
+@include huge {
+  #button {
+    margin-left: 16px;
+  }
 }

@@ -118,3 +118,30 @@
     }
   }
 }
+
+@include huge {
+  .upload {
+    margin: 48px 12.5%;
+  }
+  .upload__video {
+    margin-right: 24px;
+  }
+  .upload__inputs--sep {
+    display: flex;
+    border-bottom: 1px solid $mercury;
+  }
+  .upload__inputs--sep2 {
+    margin-top: 44px;
+    width: -moz-available;
+  }
+  .upload__inputs--description {
+    border: none;
+  }
+  .upload__video--image {
+    width: 344px;
+    height: 183px;
+  }
+  .upload__inputs--description--input {
+    height: 102px;
+  }
+}

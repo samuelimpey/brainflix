@@ -2,7 +2,6 @@ import React from "react";
 import Avatar from "../../assets/images/avatar.jpg";
 
 export default function Comments({ current }) {
-  console.log(current);
   const comments =
     current.comments &&
     current.comments.map(function(comment) {
@@ -30,7 +29,6 @@ export default function Comments({ current }) {
     <>
       <form className="comment-input">
         <h3 className="comment-input--count">
-          {" "}
           {current.comments.length} Comments
         </h3>
         <div className="comment-input__section">

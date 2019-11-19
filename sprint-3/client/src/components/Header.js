@@ -2,7 +2,6 @@ import React from "react";
 import logo from "../assets/logo/Logo-brainflix.svg";
 import avatar from "../assets/images/avatar.jpg";
 import plus from "../assets/icons/SVG/Icon-upload.svg";
-import search from "../assets/icons/SVG/Icon-search.svg";
 import { Link } from "react-router-dom";
 
 export default function header() {

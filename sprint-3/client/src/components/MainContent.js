@@ -10,10 +10,12 @@ export default class MainContent extends React.Component {
     console.log(prevProps, this.props);
     if (this.props.match.params.videoID !== prevProps.match.params.videoID) {
       axios
-        .get(
-          `https://project-2-api.herokuapp.com/videos/${this.props.match.params.videoID}?api_key=8a316df3-fb97-4957-a135-d31dcd062cd1`
-        )
-        .then(response => this.props.updateState(response.data));
+        .get(`http://localhost:5000/videos/${this.props.match.params.videoID}`)
+        .then(response => {
+          if (response.data.length > 0) {
+            this.props.updateState(response.data[0]);
+          }
+        });
     }
   }
   render() {

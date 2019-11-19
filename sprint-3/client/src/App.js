@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "./components/Header";
 import MainContent from "./components/MainContent";
 import axios from "axios";
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Upload from "./components/Upload";
 
 class App extends Component {
@@ -16,14 +16,14 @@ class App extends Component {
   }
 
   updateState = newState => {
+    console.log(newState);
     this.setState({
       currentVid: newState
     });
   };
   componentDidMount() {
-    console.log(this.props);
     axios
-      .get("https://localhost:5000/videos")
+      .get(`http://localhost:5000/videos`)
       .then(response => {
         this.setState({
           videos: response.data
@@ -31,17 +31,12 @@ class App extends Component {
         return response.data[0].id;
       })
       .then(videoId => {
-        axios
-          .get(
-            `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=8a316df3-fb97-4957-a135-d31dcd062cd1`
-          )
-          .then(resp => {
-            // console.log(resp);
-            this.setState({
-              currentVid: resp.data,
-              id: resp.data.id
-            });
+        axios.get(`http://localhost:5000/videos/${videoId}`).then(resp => {
+          this.setState({
+            currentVid: resp.data[0],
+            id: resp.data[0].id
           });
+        });
       });
   }
 
@@ -50,11 +45,9 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.id);
     return (
       <>
         <Header />
-        {/* <BrowserRouter> */}
         <Switch>
           <Route
             path="/"
@@ -69,7 +62,7 @@ class App extends Component {
             )}
           />
           <Route
-            path="/video/:videoID"
+            path="/videos/:videoID"
             render={props => (
               <MainContent
                 next={this.state.videos}
@@ -82,7 +75,6 @@ class App extends Component {
           />
           <Route path="/upload" component={Upload} />
         </Switch>
-        {/* </BrowserRouter> */}
       </>
     );
   }
